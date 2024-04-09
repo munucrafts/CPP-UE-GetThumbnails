@@ -54,7 +54,7 @@ void UBFL_GetThumbnails::RemoveBackgroundUsingPythonScript(FString AssetPath)
 {
 	// Path to the Python interpreter and script
 	FString ProjectDir = FPaths::ProjectDir();
-	FString PythonScriptPath = ProjectDir / TEXT("Plugins/Get_Thumbnails/Content/Python/RemoveThumbnail_BG.py");
+	FString PythonScriptPath = ProjectDir / TEXT("Plugins/Cpp_UE_Get_Thumbnails/Content/Python/RemoveThumbnail_BG.py");
 
 	// Command to execute the Python script
 	FString PythonInterpreter = TEXT("python");
