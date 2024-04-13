@@ -7,6 +7,7 @@
 - Download the latest release from the GitHub repository.
 - Extract the contents of the zip file into the Plugins folder of your Unreal Engine project.
 - Launch Unreal Engine and enable the plugin from the Plugins menu.
+- Tutorial Video : [https://youtu.be/zjpgdz6cLsc](https://www.youtube.com/)
 
 ## How to Use?
 - Select the assets for which you want to save thumbnails.
