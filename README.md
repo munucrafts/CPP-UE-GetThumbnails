@@ -32,4 +32,3 @@
   
 ## License
 - Feel free to use or modify this plugin according to your requirements. Attribution is appreciated but not required. If you use this plugin in your project, please consider mentioning the author in your project credits or README file.
-- If you want to support me then you can make a small contribution through https://buymeacoffee.com/munucrafts as well.
