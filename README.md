@@ -8,8 +8,8 @@
 # There are two steps to follow before using the plugin, which are listed below
 
 ## Step 01 - Rembg Installation
-- Go to "CPP-UE-GetThumbnails\Content\Python" and run "InstallRembg.py".
-- Make sure you have Python installed on your system to be able to use the above script.
+- Go to "CPP-UE-GetThumbnails\Source\Python" and run "InstallRembg.py".
+- Ensure you have Python installed on your system to be able to use the above script.
 - Rembg is necessary to remove the background of the extracted thumbnail images. If not installed, the extracted thumbnail images will have the default Unreal Engine checkered background.
 
 ## Step 02 - Plugin Installation
@@ -20,7 +20,7 @@
 - Copy and paste the unzipped plugin folder into the Plugins folder of your Unreal Engine project.
 - Build and open the project.
 - Once the project is open, enable the plugin (Plugin Name is "GetThumbnails" inside Unreal Engine) from the Plugins menu if not already enabled.
-- Below is a tutorial video for you, but I suggest you stick with the README file as it's the most updated and contains all the necessary steps in depth.
+- Below is a tutorial video for you, but I suggest you stick with the README file, as it's the most up-to-date and contains all the necessary steps in depth.
 - Tutorial Video: https://youtu.be/zjpgdz6cLsc
 
 ## How to Use?
