@@ -11,6 +11,6 @@ class GET_THUMBNAILS_API UBFL_GetThumbnails : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable)
 	static void SaveThumbnail(const FAssetData& AssetData);
 
-	UFUNCTION()
-	static void RemoveThumbnailBackground(const FString& AssetPath);
+	UFUNCTION(BlueprintCallable)
+	static void BeginBackgroundRemoval();
 };

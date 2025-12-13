@@ -23,7 +23,7 @@ void UBFL_GetThumbnails::SaveThumbnail(const FAssetData& AssetData)
 		ThumbnailTools::LoadThumbnailsFromPackage(PackageFilename, AssetFullNames, ThumbnailMap);
 		FObjectThumbnail* ObjectThumbnail = ThumbnailMap.Find(AssetFullName);
 
-		IImageWrapperModule& ImageWrapperModule = FModuleManager::Get().LoadModuleChecked<IImageWrapperModule>(TEXT("ImageWrapper"));
+		IImageWrapperModule& ImageWrapperModule = FModuleManager::Get().LoadModuleChecked<IImageWrapperModule>("ImageWrapper");
 		TSharedPtr<IImageWrapper> ImageWrapper = ImageWrapperModule.CreateImageWrapper(EImageFormat::PNG);
 
 		ImageWrapper->SetRaw(ObjectThumbnail->GetUncompressedImageData().GetData(), 
@@ -38,17 +38,18 @@ void UBFL_GetThumbnails::SaveThumbnail(const FAssetData& AssetData)
 		FString ImageFilename = AssetData.AssetName.ToString() + ".png";
 		FString CompleteImageFilePath = FPaths::Combine(ThumbnailSavePath, ImageFilename);
 		FFileHelper::SaveArrayToFile(CompressedByteArray, *CompleteImageFilePath);
-
-		RemoveThumbnailBackground(CompleteImageFilePath);
 	} 
 }
 
-void UBFL_GetThumbnails::RemoveThumbnailBackground(const FString& AssetPath)
+void UBFL_GetThumbnails::BeginBackgroundRemoval()
 {
 	FString ProjectDir = FPaths::ProjectDir();
-	FString PythonScriptPath = ProjectDir / TEXT("Plugins/CPP-UE-GetThumbnails/Source/Python/RemoveBackground.py");
-	FString PythonInterpreter = TEXT("python");
-	FString Command = FString::Printf(TEXT("\"%s\" \"%s\""), *PythonScriptPath, *AssetPath);
 
+	FString PythonScriptPath = ProjectDir / ("Plugins/CPP-UE-GetThumbnails/Source/Python/BackgroundRemoval.py");
+	FString PythonInterpreter = ("python");
+
+	FString FolderPath = ProjectDir / "Thumbnails";
+
+	FString Command = FString::Printf(TEXT("\"%s\" \"%s\""), *PythonScriptPath, *FolderPath);
 	FPlatformProcess::CreateProc(*PythonInterpreter, *Command, true, false, false, nullptr, 0, nullptr, nullptr);
 }
