@@ -1,7 +1,5 @@
 # Cpp-UE-Get-Thumbnails Plugin
 
----
-
 ## Description
 
 - The **Cpp-UE-Get-Thumbnails** plugin is designed for **Unreal Engine 5.3 and above**.  
@@ -11,11 +9,7 @@
   <img src="https://github.com/user-attachments/assets/b60133b9-690b-4d40-8299-95b7aa048763" alt="Plugin - Save Asset Thumbnails UE" />
 </p>
 
----
-
 ## There are two steps to follow before using the plugin
-
----
 
 ### Step 01 - Rembg Installation
 
@@ -35,8 +29,6 @@
 - **Rembg** is necessary to remove the background of the extracted thumbnail images.
 - If not installed, the extracted thumbnail images will have the default **Unreal Engine checkered background**.
 
----
-
 ### Step 02 - Plugin Installation
 
 - Download the **latest release** from the GitHub repository.
@@ -53,8 +45,6 @@
 **Tutorial Video:**  
 https://youtu.be/zjpgdz6cLsc
 
----
-
 ## How to Use?
 
 - Select the assets for which you want to save thumbnails.
@@ -63,8 +53,6 @@ https://youtu.be/zjpgdz6cLsc
 - Click on **"SaveThumbnailsFromAssets"**.
 - Allow it some time to process the images.
 - Thumbnails will be saved as **.png files** in the **"Thumbnails"** folder located in your project directory.
-
----
 
 ## License
 
